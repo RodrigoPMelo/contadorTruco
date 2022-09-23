@@ -75,7 +75,7 @@ class _Cont_truco extends State<Cont_truco> {
         trucoString = 'TRUCO MARRECO';
       }
     });
-    verificaganhador();
+    verificaGanhador();
     return cont;
   }
 
@@ -89,7 +89,7 @@ class _Cont_truco extends State<Cont_truco> {
     });
   }
 
-  void verificaganhador() {
+  void verificaGanhador() {
     setState(() {
       if ((contaPontoA >= 12) || (contaPontoB >= 12)) {
         if (contaPontoA >= 12) {
@@ -198,7 +198,7 @@ class _Cont_truco extends State<Cont_truco> {
                     child: IconButton(
                         onPressed: (() {
                           contaPontoA = somaPontos(contaPontoA);
-                          verificaganhador();
+                          verificaGanhador();
                         }),
                         splashRadius: 1,
                         iconSize: 70,
@@ -250,7 +250,7 @@ class _Cont_truco extends State<Cont_truco> {
                       child: IconButton(
                           onPressed: (() {
                             contaPontoB = somaPontos(contaPontoB);
-                            verificaganhador();
+                            verificaGanhador();
                           }),
                           splashRadius: 1,
                           iconSize: 70,
